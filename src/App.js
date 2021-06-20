@@ -22,7 +22,7 @@ function App() {
             <Route path="/map" component={Map} />
             <Route path="/parcels" component={Parcel} exact/>
             <Route path="/parcels/:id" component={ParcelID}  exact/>
-            <Route path="/parcels/createParcel/new" component={ParcelCreate}  />
+            <Route path="/parcels/createParcel/new" component={ParcelCreate} exact/>
         </Switch>
         </Router>
         </>
