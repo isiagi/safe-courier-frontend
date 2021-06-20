@@ -75,7 +75,7 @@ export default function Parcel() {
       <CssBaseline />
       <main>
         <Container className={classes.cardGrid} maxWidth="md">
-        <Button><Linking to={`/parcels/new/parcel`}>Create New Parcel</Linking></Button>
+        <Button href="/parcels/new/parcel">Create New Parcel</Button>
          <p></p>
          <h4 style={{textAlign: 'center', fontSize: '30px'}}>Your Current Parcels</h4>
           <Grid container spacing={4}>
