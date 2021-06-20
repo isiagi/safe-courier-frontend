@@ -91,7 +91,7 @@ export default function SignInSide() {
       .then((data) => {
         console.log(data.message.token);
         localStorage.setItem("token", data.message.token);
-        setRedirect("/home");
+        setRedirect("/parcels");
       })
       .catch((err) => {
         console.log(err);
