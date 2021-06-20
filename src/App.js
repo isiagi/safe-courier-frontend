@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import Home from './componets/Home/Home'
+import Navbar from './componets/Navbar/Navbar'
+import Signup from './componets/auth/Sign'
+import Login from './componets/auth/logIn'
+import Map from './componets/Dispaly/index'
+import Parcel from './componets/Parcel/Parcel'
+import ParcelID from './componets/Parcel/ParcelID'
+import ParcelCreate from './componets/Parcel/PostParcel'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+        <Router>
+            <Navbar/>
+        <Switch>
+            <Route path="/" component={Home} exact/>
+            <Route path="/signup" component={Signup} exact/>
+            <Route path="/login" component={Login} exact/>
+            <Route path="/map" component={Map} />
+            <Route path="/parcels" component={Parcel} exact/>
+            <Route path="/parcels/:id" component={ParcelID}  exact/>
+            <Route path="/parcels/createParcel/new/" component={ParcelCreate}  />
+        </Switch>
+        </Router>
+        </>
+    )
 }
 
-export default App;
+export default App
