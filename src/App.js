@@ -1,7 +1,6 @@
 import React from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Home from './componets/Home/Home'
-import Navbar from './componets/Navbar/Navbar'
 import Signup from './componets/auth/Sign'
 import Login from './componets/auth/logIn'
 import Map from './componets/Dispaly/index'
@@ -14,7 +13,6 @@ function App() {
     return (
         <>
         <Router>
-            <Navbar/>
         <Switch>
             <Route path="/" component={Home} exact/>
             <Route path="/signup" component={Signup} exact/>
