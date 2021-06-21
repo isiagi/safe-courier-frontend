@@ -26,12 +26,14 @@ function ParcelID({ match }) {
 
   useEffect(() => {
     fetchItems();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  
   }, []);
+
+  console.log(match);
 
   const fetchItems = async () => {
     const data = await fetch(
-      `http://localhost:9000/api/v1/parcels/${match.params.id}`,
+      `https://safecourie.herokuapp.com/api/v1/parcels/${match.params.id}`,
       {
         method: "GET",
         headers: {
@@ -40,7 +42,7 @@ function ParcelID({ match }) {
       }
     );
     const items = await data.json();
-    // console.log(items);
+    console.log(items);
     setParcels(items.message);
   };
   console.log(parcels);
