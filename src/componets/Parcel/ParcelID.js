@@ -8,6 +8,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import Nav from '../Navbar/Navbar'
 
 const useStyles = makeStyles({
   root: {
@@ -50,6 +51,7 @@ function ParcelID({ match }) {
 
   return (
     <div>
+    <Nav />
     <h1 style={{textAlign: 'center'}}>Parcel Details</h1>
       <Card className={classes.root} mb={5}>
         <CardActionArea>

@@ -9,6 +9,7 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
+import Nav from '../Navbar/Navbar'
 
 function Copyright() {
   return (
@@ -91,6 +92,8 @@ export default function SignUp() {
   }
 
   return (
+    <>
+    <Nav />
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
@@ -175,5 +178,6 @@ export default function SignUp() {
         <Copyright />
       </Box>
     </Container>
+  </>
   );
 }

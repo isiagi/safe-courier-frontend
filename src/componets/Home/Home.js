@@ -3,6 +3,7 @@ import { Link} from 'react-router-dom'
 import photo from '../images/1.jpg'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import Nav from '../Navbar/Navbar'
 import './Home.css'
 
 function Home() {
@@ -11,6 +12,7 @@ const link = {textDecoration: 'none',
     color: '#fff'}
     return (
         <>
+        <Nav />
            <div className='home__container'>
             <div className="text_section">
                 

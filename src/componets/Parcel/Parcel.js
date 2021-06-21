@@ -11,6 +11,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import {Link as Linking} from 'react-router-dom'
+import Nav from '../Navbar/Navbar'
 
 function Copyright() {
   return (
@@ -72,6 +73,7 @@ export default function Parcel() {
 
   return (
     <React.Fragment>
+    <Nav />
       <CssBaseline />
       <main>
         <Container className={classes.cardGrid} maxWidth="md">
