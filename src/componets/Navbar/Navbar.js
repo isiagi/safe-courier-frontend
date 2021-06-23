@@ -69,6 +69,9 @@ export default function ButtonAppBar() {
             <Button color="inherit"><Link to={'/parcels'} className={classes.titl}>
           Home
               </Link></Button>
+              <Button color="inherit"><Link to={'/admin'} className={classes.titl}>
+          Admin
+              </Link></Button>
             <Button color="inherit" onClick={handleLogOut}>
               Logout
             </Button>
