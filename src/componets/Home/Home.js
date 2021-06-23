@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Link} from 'react-router-dom'
 import photo from '../images/1.jpg'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -10,6 +10,14 @@ function Home() {
     const sty = {padding:'15px', backgroundColor: '#150E56', color:'#fff', borderRadius: "5px"}
 const link = {textDecoration: 'none',
     color: '#fff'}
+
+    const admin = JSON.stringify({adminEmail:'admin@mail.com', adminPassword: "admin1234"})
+
+    useEffect(() => {
+        return alert(admin)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
+
     return (
         <>
         <Nav />
