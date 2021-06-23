@@ -8,7 +8,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import Nav from '../Navbar/Navbar'
+import Nav from "../Navbar/Navbar";
 
 const useStyles = makeStyles({
   root: {
@@ -27,8 +27,8 @@ function ParcelID({ match }) {
 
   useEffect(() => {
     fetchItems();
-  
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   console.log(match);
@@ -51,31 +51,43 @@ function ParcelID({ match }) {
 
   return (
     <div>
-    <Nav />
-    <h1 style={{textAlign: 'center'}}>Parcel Details</h1>
-      <Card className={classes.root} mb={5}>
-        <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image="/static/images/cards/contemplative-reptile.jpg"
-            title="Contemplative Reptile"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              {parcels.description}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <CardActions>
-          <Button size="small" color="primary">
-            Learn More
-          </Button>
-        </CardActions>
-      </Card>
+      <Nav />
+      <h1 style={{ textAlign: "center" }}>Parcel Details</h1>
+      <div style={{ display: "flex", justifyContent: "space-around" }}>
+        <Card className={classes.root} mb={5}>
+          <CardActionArea>
+            <CardMedia
+              className={classes.media}
+              image="/static/images/cards/contemplative-reptile.jpg"
+              title="Contemplative Reptile"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                {parcels.description}
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          <CardActions>
+            <Button size="small" color="primary">
+              Thanks from @safe courier
+            </Button>
+          </CardActions>
+        </Card>
+        <div>
+          <h1 style={{ textDecoration: "underLine" }}>Parcel Summary</h1>
+          <h3>Description : {parcels.description}</h3>
+          <h3>Pick Up : {parcels.pick}</h3>
+          <h3>Destination : {parcels.destination}</h3>
+          <h3>Status : {parcels.status}</h3>
+          <h3>UserId : {parcels.userId}</h3>
+        </div>
+      </div>
       <Map />
     </div>
   );
