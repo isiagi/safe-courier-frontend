@@ -46,6 +46,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(6),
   },
+  lin : {
+    textDecoration: "none",
+  },
 }));
 
 export default function Parcel() {
@@ -83,7 +86,7 @@ export default function Parcel() {
           <Grid container spacing={4}>
 
             {parcels === 'No Parcel Availiable' ? 'No Parcel Availiable' : parcels.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4} >
+              <Grid item key={card._id} xs={12} sm={6} md={4} >
                 <Card className={classes.card} key={card._id}>
                   <CardMedia
                     className={classes.cardMedia}
@@ -100,10 +103,10 @@ export default function Parcel() {
                   </CardContent>
                   <CardActions>
                     <Button size="small" color="primary">
-                     <Linking to={`/parcels/${card._id}`}>View</Linking>
+                     <Linking to={`/parcels/${card._id}`} className={classes.lin}>View</Linking>
                     </Button>
                     <Button size="small" color="primary">
-                      Edit
+                    <Linking to={`/parcels/${card._id}/edit`} className={classes.lin}>Edit</Linking>
                     </Button>
                   </CardActions>
                 </Card>
