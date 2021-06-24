@@ -53,7 +53,7 @@ function ParcelID({ match }) {
     <div>
       <Nav />
       <h1 style={{ textAlign: "center" }}>Parcel Details</h1>
-      <div style={{ display: "flex", justifyContent: "space-around" }}>
+      <div style={{ display: "flex", justifyContent: "space-around", flexWrap: 'wrap' }}>
         <Card className={classes.root} mb={5}>
           <CardActionArea>
             <CardMedia
