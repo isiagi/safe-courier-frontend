@@ -57,7 +57,7 @@ export default function EditParcel({match}) {
   const handleSubmit = (e) => {
     console.log(value);
     e.preventDefault();
-    fetch(`https://safecourie.herokuapp.com/api/v1/parcels/${match.params.id}/edit`, {
+    fetch(`https://safecourie.herokuapp.com/api/v1/parcels/${match.params.id}/edit/admin`, {
       headers: { "Content-Type": "application/json",
       authorization: `Bearer ${localStorage.getItem("token")}` 
      },
@@ -72,10 +72,10 @@ export default function EditParcel({match}) {
     })
       .then((docs) => {
         console.log(docs)
-        if (docs.ok) {
-          return docs.json();
+        if (!docs.ok) {
+          return alert('You are not an admin /n You can not edit')
         }
-        console.log("error");
+        console.log("ok");
       })
       .then(() => {
         setRedirect('/parcels');
@@ -98,7 +98,7 @@ export default function EditParcel({match}) {
       <CssBaseline />
       <div className={classes.paper}>
         <Typography component="h1" variant="h5">
-          Edit Parcel
+          Admin Edit Parcel
         </Typography>
         <form className={classes.form} noValidate onSubmit={handleSubmit}>
           <Grid container spacing={2}>
@@ -132,13 +132,25 @@ export default function EditParcel({match}) {
                 required
                 fullWidth
                 onChange={handleChange}
+                id="status"
+                label="status"
+                name="status"
+                type="text"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                onChange={handleChange}
                 name="pick"
                 label="pick"
                 type="text"
                 id="pick"
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={12} sm={6}>
               <TextField
                 variant="outlined"
                 required
