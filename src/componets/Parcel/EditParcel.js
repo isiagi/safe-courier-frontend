@@ -132,25 +132,13 @@ export default function EditParcel({match}) {
                 required
                 fullWidth
                 onChange={handleChange}
-                id="status"
-                label="status"
-                name="status"
-                type="text"
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                onChange={handleChange}
                 name="pick"
                 label="pick"
                 type="text"
                 id="pick"
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12}>
               <TextField
                 variant="outlined"
                 required
