@@ -103,7 +103,7 @@ export default function Parcel() {
                      <Linking to={`/parcels/${card._id}`}>View</Linking>
                     </Button>
                     <Button size="small" color="primary">
-                      Edit
+                    <Linking to={`/parcels/${card._id}/edit/admin`}>Edit</Linking>
                     </Button>
                   </CardActions>
                 </Card>
