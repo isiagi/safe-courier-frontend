@@ -65,7 +65,7 @@ export default function SignUp() {
       body: JSON.stringify({
         description: value.description,
         weight: value.weight,
-        status: value.status,
+        title: value.title,
         pick: value.pick,
         destination: value.destination,
       }),
@@ -102,19 +102,20 @@ export default function SignUp() {
         </Typography>
         <form className={classes.form} noValidate onSubmit={handleSubmit}>
           <Grid container spacing={2}>
-            <Grid item xs={12}>
+          <Grid item xs={12}>
               <TextField
                 variant="outlined"
                 required
                 fullWidth
                 onChange={handleChange}
-                id="description"
-                label="description"
-                name="description"
-                autoComplete="description"
+                id="title"
+                label="title"
+                name="title"
+                type="text"
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            
+            <Grid item xs={12} >
               <TextField
                 name="weight"
                 variant="outlined"
@@ -126,16 +127,16 @@ export default function SignUp() {
                 autoFocus
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12}>
               <TextField
                 variant="outlined"
                 required
                 fullWidth
                 onChange={handleChange}
-                id="status"
-                label="status"
-                name="status"
-                type="text"
+                id="description"
+                label="description"
+                name="description"
+                autoComplete="description"
               />
             </Grid>
             <Grid item xs={12} sm={6}>

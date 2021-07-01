@@ -95,10 +95,10 @@ export default function Parcel() {
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      {card.description}
+                      {card.title}
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe the content.
+                    {card.description}
                     </Typography>
                   </CardContent>
                   <CardActions>

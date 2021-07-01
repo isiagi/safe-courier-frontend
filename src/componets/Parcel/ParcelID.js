@@ -9,6 +9,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Nav from "../Navbar/Navbar";
+import imag from '../images/1.jpg'
 
 const useStyles = makeStyles({
   root: {
@@ -58,18 +59,15 @@ function ParcelID({ match }) {
           <CardActionArea>
             <CardMedia
               className={classes.media}
-              image="/static/images/cards/contemplative-reptile.jpg"
+              image={imag}
               title="Contemplative Reptile"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-                {parcels.description}
+                {parcels.title}
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat
+              {parcels.description}
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -81,11 +79,11 @@ function ParcelID({ match }) {
         </Card>
         <div>
           <h1 style={{ textDecoration: "underLine" }}>Parcel Summary</h1>
+          <h3>Title : {parcels.title}</h3>
           <h3>Description : {parcels.description}</h3>
           <h3>Pick Up : {parcels.pick}</h3>
           <h3>Destination : {parcels.destination}</h3>
           <h3>Status : {parcels.status}</h3>
-          <h3>UserId : {parcels.userId}</h3>
         </div>
       </div>
       <Map />
