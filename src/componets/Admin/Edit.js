@@ -67,6 +67,7 @@ export default function EditParcel({match}) {
         weight: value.weight,
         status: value.status,
         pick: value.pick,
+        title: value.title,
         destination: value.destination,
       }),
     })
@@ -102,6 +103,18 @@ export default function EditParcel({match}) {
         </Typography>
         <form className={classes.form} noValidate onSubmit={handleSubmit}>
           <Grid container spacing={2}>
+          <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                onChange={handleChange}
+                id="title"
+                label="title"
+                name="title"
+                autoComplete="title"
+              />
+            </Grid>
             <Grid item xs={12}>
               <TextField
                 variant="outlined"
