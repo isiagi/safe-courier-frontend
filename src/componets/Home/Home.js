@@ -11,12 +11,7 @@ function Home() {
 const link = {textDecoration: 'none',
     color: '#fff'}
 
-    const admin = JSON.stringify({adminEmail:'admin@mail.com', adminPassword: "admin1234"})
-
-    useEffect(() => {
-        return alert(admin)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[])
+    //const admin = JSON.stringify({adminEmail:'admin@mail.com', adminPassword: "admin1234"})
 
     return (
         <>
