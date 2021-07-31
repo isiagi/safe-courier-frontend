@@ -12,6 +12,7 @@ import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import {Link as Linking} from 'react-router-dom'
 import Nav from '../Navbar/Navbar'
+import Footer from '../footer/Footer';
 
 function Copyright() {
   return (
@@ -116,7 +117,7 @@ export default function Parcel() {
         </Container>
       </main>
       {/* Footer */}
-      <footer className={classes.footer}>
+      {/* <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
           Footer
         </Typography>
@@ -124,8 +125,9 @@ export default function Parcel() {
           Something here to give the footer a purpose!
         </Typography>
         <Copyright />
-      </footer>
+      </footer> */}
       {/* End footer */}
+      <Footer />
     </React.Fragment>
   );
 }
