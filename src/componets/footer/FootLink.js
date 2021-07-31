@@ -15,36 +15,36 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column'
     },
   }));
-  
+
   const pageTo = (page) => {
     let day;
     switch(page){
         case 'Home':
-             day = "hello";
+             day = "/#";
              break;
         case 'Contant Us':
-            day = 'hey there';
+            day = '/#';
             break;
         case 'FAQ':
-            day = 'he';
+            day = '/#';
             break;
         case 'Terms and Conditions':
-            day = 'h';
+            day = '/#';
             break;
         case 'Help':
-            day = 'heyyz';
+            day = '/#';
             break;
         case 'About Us':
-            day = 'heyyx';
+            day = '/#';
             break;
         case 'Careers':
-            day = 'heyyw';
+            day = '/#';
             break;
         case 'Capabilities':
-            day = 'heyyo';
+            day = '/#';
             break;
         default:
-            day = 'hey'
+            day = '/#'
     }
     return day
 }
@@ -55,7 +55,7 @@ function FootLink({header, linkOne, linkTwo, linkThree, linkFour}) {
     return (
         <div>
            <Box className={classes.supoortBox}>
-          <h5>{header}</h5>
+          <h4>{header}</h4>
           <Link to={pageTo(linkOne)} className="supportLink">{linkOne}</Link>
           <Link to={pageTo(linkTwo)} className="supportLink">{linkTwo}</Link>
           <Link to={pageTo(linkThree)} className="supportLink">{linkThree}</Link>
