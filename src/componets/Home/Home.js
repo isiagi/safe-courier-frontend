@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link} from 'react-router-dom'
 import photo from '../images/1.jpg'
+import { Button } from '@material-ui/core'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import Nav from '../Navbar/Navbar'
@@ -27,7 +28,7 @@ const link = {textDecoration: 'none',
                 </div>
                 <div>
                 <h3 style={{fontSize: '35px', color: '#1597BB'}}>Login to start moving your Parcels</h3>
-                <button style={sty}><Link to='/login' style={link}>Get Started</Link></button>     
+                <Button style={sty}><Link to='/login' style={link}>Get Started</Link></Button>     
                 </div>
             </Carousel>
             </div>
