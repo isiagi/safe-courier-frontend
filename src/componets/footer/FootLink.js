@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     },
     supoortBox: {
         display: 'flex', 
-        flexDirection: 'column'
+        flexDirection: 'column',
     },
   }));
 
